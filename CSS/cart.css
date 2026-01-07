@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('background/user-background2.jpg');
+}
+
+.wrapper {
+    display: flexbox;
+    justify-content: center;
+}
+.empty-message {
+    height: 300px;
+    color: rgb(241, 180, 67);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px ;  
+    font-size: 14px;
+    background-color: #fff6e6;
+    padding: 10px;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 10px;
+    text-align: center;
+}
+.group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.motivation-poster img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 70vh; 
+}
+.empty-message p{
+    margin-bottom: 20px;
+    max-width: 250px;
+}
+
+.empty-message a{
+    color: rgb(241, 180, 67);
+    vertical-align: bottom;
+    font-size: 14px;
+    background-color: #fff6e6;
+    padding: 10px;
+    border: 1px solid rgb(255, 166, 0);
+    border-radius: 5px;
+    text-decoration: none;
+}
+.empty-message a:hover{
+    
+    background-color: #fcc245;
+    color: beige;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+}
+
+input[type="submit"], .checkout-button, .back-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover, .checkout-button:hover, .back-button:hover {
+    background-color: #218838;
+}
+
+.checkout-button, .back-button {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.back-button {
+    background-color: #007bff;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,319 @@
+
+/* Body styling */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 6%;
+    
+}
+
+.main_page {
+    
+    font-size: 40px;
+    font-style: bold;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.navButton {
+    font-size: 30px;
+    font-weight: bold; /* Corrected bold styling */
+    font-family: 'Greek', sans-serif; /* Add sans-serif as a fallback */
+    align-items: center;
+    
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    /*background-color: hsl(54, 37%, 54%);*/
+    width: 100%;
+    
+    padding: 0 2em;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.login-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin-right: auto; /* Pushes logo to the far left */
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 1.5em; /* Space between items in nav-items */
+    
+}
+
+
+
+
+.NavButton, .NavLogin,  .NavUserProfile, .NavLogout, .login_welcome  {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    align-items: center; 
+    
+}
+
+.NavRegister, .Navlogout {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(78, 59, 37);
+    color: rgb(189, 32, 32);
+    border: 4px solid white;
+    border-radius: 12px;
+}
+
+.navbar a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+.nav-items a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform:scaleX(0);
+    transition: transform .5s;
+}
+
+
+
+.navbar a:hover {
+    background-color: hsl(0, 59%, 70%);
+    border-radius: 12px;
+}
+.nav-items a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+    
+}
+
+.cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+}
+
+.cart img {
+    width: 30px;
+}
+
+.cart .cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Cart Preview Styles */
+.cart-preview {
+    top:50px;
+    text-align: left;
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to the cart icon */
+    background-color: white; /* Background color of the preview */
+    border: 1px solid #ddd; /* Border to define the preview area */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the preview */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    z-index: 0; /* Make sure it appears above other elements */
+    right: 0; /* Align it to the right of the cart icon */
+    width: 400px; /* Set a width for the preview */
+}
+
+
+/* Show the cart preview when hovering over the cart */
+.cart:hover .cart-preview {
+    display: block; /* Show the preview on hover */
+}
+
+.cart-preview h3 {
+    margin: 0 0 10px; /* Margin for the title */
+    font-size: 18px; /* Title font size */
+    font-weight: bold; /* Bold title */
+}
+
+.cart-preview ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cart-preview ul li {
+    padding: 5px 0; /* Space between items */
+    border-bottom: 1px solid #eee; /* Line separating items */
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    
+}
+.cart-preview ul li:last-child {
+    border-bottom: none; /* Remove line from the last item */
+    text-align: left;
+}
+
+.view-cart {
+    display: block; /* Make the view cart link block level */
+    text-align: center; /* Center the text */
+    padding-top: 50px;
+    padding: 8px; /* Padding */
+    background-color: #007bff; /* Button background color */
+    color: rgb(241, 130, 130); /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 10px; /* Margin above the button */
+}
+
+.view-cart:hover {
+    background-color: #0056b3; /* Darken background on hover */
+}
+
+
+.toggle-button {
+    position: absolute;
+    right: 0rem;
+    display: none;
+    margin-right: 10px;
+    padding-right: 10%;  
+}
+
+
+@media (max-width: 500px) {
+    .toggle-button {
+        display: flex;
+        
+    }
+    .nav-items {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-items li {
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+    .navButton{width: 100%;}
+    .cart-preview {
+        display: none !important;}
+    /* Show nav-items when toggle button is active */
+    .nav-items.active {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column;
+        display: flex;
+     }
+    }
+
+/* background Section */
+.cardview {
+    background-size:cover;
+    background-image: url('https://wallpapers.com/images/high/pompadour-giga-chad-kni4u74uoegys5o9.webp');
+    background-position: 75% 25%;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 70%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.979);
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.cardview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    z-index: 1; /* Overlay stays behind content */
+}
+
+.cardview h1, .cardview p, .cardview .browse {
+    z-index: 2; /* Ensure content is above the overlay */
+    position: relative;
+}
+
+.cardview h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.cardview .browse {
+    background-color:rgba(68, 98, 180, 0.459) ;
+    text-wrap: wrap;
+    padding: 20px 20px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block; 
+}
+
+.cardview .browse:hover {
+background-color: hsl(0, 59%, 70%);
+    border-radius: 12px;}
